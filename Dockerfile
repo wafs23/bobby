@@ -10,7 +10,7 @@ FROM alpine:3.20
 WORKDIR /go/src/app
 
 COPY --from=builder /go/src/app/main .
-COPY app.env .
+# COPY app.env .
 COPY ./templates ./
 ADD templates ./templates
 COPY ./assets ./
