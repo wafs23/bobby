@@ -1,0 +1,23 @@
+{{- define "base" -}}
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  {{- if .csrfv -}}<meta name="csrf-token" content="{{.csrfv}}">{{- end -}}
+
+  <base href="{{.thisUrl}}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="/assets/css/style.css?v0.00" fetchpriority="high">
+  <noscript><link rel="stylesheet" href="/assets/css/no-script.css"></noscript>
+
+  <title>{{.title}}</title>
+</head>
+<body>
+
+<nav></nav>
+
+<main>
+
+{{- end -}}
+
